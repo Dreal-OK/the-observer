@@ -1,0 +1,205 @@
+* { 
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  background: url('./assets/bg.jpg') center center/cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+.header {
+  padding: .75rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.header-content .brand {
+  display: flex;
+  align-items: center;
+
+}
+
+.header-content .brand  svg{
+  font-size: 2.5rem;
+  color: white;
+  margin-right: .5rem;
+
+}
+
+.header-content .brand span {
+  font-size: 2rem;
+  color: white;
+}
+
+.header-content .brand span em {
+  color: rgb(143, 3, 15);
+}
+
+.header-content .menu-toggle  {
+  display: none;
+  transition: all ease-in-out .5s;
+  
+}
+
+.header-content .menu-toggle svg {
+  color:  black;
+  font-size: 2rem;
+  cursor: pointer;
+  
+}
+
+.header-content .menu-toggle:hover {
+  transform: scale(1.1);
+  
+}
+
+@media screen and (max-width: 768px) {
+
+  .header-content .header-nav nav {
+    display: none;
+
+  }
+
+  .header-content .menu-toggle {
+    display: block;
+  }
+  
+}
+
+.header-content .header-nav nav ul {
+  display: flex;
+   align-items: center;
+   justify-content: flex-start;
+}
+
+.header-content nav ul li {
+  margin: 0 1rem;
+  list-style: none;
+}
+
+.header-content nav ul li svg {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #fff;
+}
+
+.header-content .menu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: white;
+  width: 40vw;
+  height: 80vh;
+  background: rgba(253, 71, 71, 0.452);
+  /* overflow-y: scroll; */
+  margin-top: .75rem;
+  padding: .5rem;
+  border-radius: 15px;
+
+
+}
+
+
+.header-content .menu-header {
+  display: flex; justify-content: space-between; align-items: center;
+}
+
+.header-content .menu-header .menu-brand {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.header-content  .menu-header svg {
+  font-size: 1.7rem;
+  transition: all ease-in-out .5s;
+  cursor: pointer;
+}
+
+.header-content .menu-header svg:hover {
+  transform:  scale(1.1)
+}
+
+
+.header-content .menu nav  ul li{
+  transition: all ease-in-out .5s;
+ margin: 1rem 0;
+}
+
+.header-content .menu nav ul li:hover {
+  transform: scale(1.1)
+
+}
+
+.compose {
+  text-align: center
+}
+
+.compose .compose-header{
+  color: black;
+  font-weight: bold;
+  font-size: 1.7rem
+}
+
+.compose .compose-content label {
+ 
+    color: rgb(77, 76, 76);
+}
+
+.compose-content input, .compose-content textarea, .compose .compose-content{
+  display: block;
+  width: 80%;
+  margin: auto;
+  color: white;
+  margin-bottom: 2rem;
+
+  
+}
+
+.compose .compose-content input {
+  padding: .2rem;
+  border-radius: 10px;
+  background-color: gray;
+}
+
+.compose .compose-content textarea {
+  height: 5rem; 
+  border-radius: 10px;
+  background-color: gray;
+}
+
+.compose .compose-content textarea:focus,
+.compose .compose-content input:focus {
+  border: none;
+  outline: none;
+}
+
+.compose .compose-content textarea:hover 
+.compose .compose-content input:hover {
+  border: none; outline: none;
+}
+
+.compose .compose-submit {
+  width: 20%;
+  height: 40px;
+  transition: all ease-in-out .5s;
+  cursor: pointer;
+  background-color: rgb(241, 104, 104);
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.compose .compose-submit:hover {
+  transform: scale(1.1)
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
